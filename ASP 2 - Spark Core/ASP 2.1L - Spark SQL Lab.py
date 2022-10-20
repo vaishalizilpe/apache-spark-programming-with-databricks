@@ -35,7 +35,7 @@
 # COMMAND ----------
 
 # TODO
-events_df = FILL_IN
+events_df = spark.table('events')
 
 # COMMAND ----------
 
