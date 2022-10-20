@@ -35,8 +35,7 @@
 # COMMAND ----------
 
 # TODO
-events_df = FILL_IN
-
+events_df = spark.table('events')
 # COMMAND ----------
 
 # MAGIC %md ### 2. Display DataFrame and inspect schema
@@ -58,7 +57,9 @@ events_df = FILL_IN
 
 # TODO
 mac_df = (events_df
-          .FILL_IN
+          .select(events)
+          .where(device='macOS')
+          .sortBy(event_timestamp)
          )
 
 # COMMAND ----------
